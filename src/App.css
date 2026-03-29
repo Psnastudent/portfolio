@@ -1,0 +1,27 @@
+/* App-level layout and overrides */
+
+main {
+  position: relative;
+  z-index: 0;
+}
+
+/* Separator lines between sections */
+#about,
+#skills,
+#projects,
+#contact {
+  position: relative;
+}
+
+#about::before,
+#skills::before,
+#projects::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(80%, 600px);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-subtle), transparent);
+}

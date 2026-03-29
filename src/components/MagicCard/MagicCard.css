@@ -1,0 +1,81 @@
+/* MagicCard — mouse-tracking border glow effect */
+
+.magic-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  --glow-x: 50%;
+  --glow-y: 50%;
+  --glow-intensity: 0;
+  --magic-border-color: var(--magic-base);
+  --magic-glow-color: var(--magic-glow-base);
+  --magic-glow-radius: 200px;
+}
+
+/* Animated border glow that follows the mouse */
+.magic-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  background: radial-gradient(
+    var(--magic-glow-radius) circle at var(--glow-x) var(--glow-y),
+    var(--magic-border-color) 0%,
+    rgba(0, 0, 0, calc(var(--glow-intensity) * 0.15)) 30%,
+    transparent 60%
+  );
+  border-radius: inherit;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: var(--glow-intensity);
+  transition: opacity 0.4s ease;
+  z-index: 2;
+}
+
+[data-theme="dark"] .magic-card::after {
+  background: radial-gradient(
+    var(--magic-glow-radius) circle at var(--glow-x) var(--glow-y),
+    var(--magic-border-color) 0%,
+    rgba(255, 255, 255, calc(var(--glow-intensity) * 0.15)) 30%,
+    transparent 60%
+  );
+}
+
+/* Inner spotlight glow on the surface */
+.magic-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    calc(var(--magic-glow-radius) * 1.5) circle at var(--glow-x) var(--glow-y),
+    var(--magic-glow-color) 0%,
+    transparent 70%
+  );
+  opacity: var(--glow-intensity);
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Lift on hover */
+.magic-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="dark"] .magic-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Container for global spotlight */
+.magic-card-container {
+  position: relative;
+}
