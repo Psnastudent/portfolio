@@ -6,76 +6,40 @@ import './Projects.css';
 
 const projects = [
   {
-    title: 'AI Powered RailMadad',
-    description: 'Developed an AI-powered grievance redressal system for Indian Railways to assist passengers efficiently. Integrated AI/ML models for query classification, smart complaint routing, and automated responses.',
-    tags: ['React.js', 'Python', 'AI/ML', 'FastAPI'],
+    title: 'Fake News Detection',
+    description: 'An AI-powered fake news detection system that analyzes news articles and determines their credibility to fight misinformation.',
+    tags: ['AI/ML', 'Python', 'NLP'],
     gradient: 'linear-gradient(135deg, #fca5a5 0%, #93c5fd 100%)',
-    date: 'Sep 2024',
-    github: '#',
+    date: '2024',
+    github: 'https://github.com/Psnastudent/Fakenews',
     live: '#',
   },
   {
-    title: 'Portfolio Website',
-    description: 'This very portfolio — featuring WebGL aurora backgrounds, infinite scrolling skill carousels, and smooth scroll-triggered animations using Framer Motion.',
-    tags: ['React', 'Framer Motion', 'Vite'],
+    title: 'OD Management',
+    description: 'An Organization Duty management system designed to streamline tracking and approving employee leave and duty requests.',
+    tags: ['Management', 'Web App', 'Dashboard'],
     gradient: 'linear-gradient(135deg, #86efac 0%, #7dd3fc 100%)',
-    date: '2025',
-    github: '#',
+    date: '2024',
+    github: 'https://github.com/Psnastudent/OD-management',
     live: '#',
   },
   {
-    title: 'EcoTrack Dashboard',
-    description: 'A sustainability tracking dashboard for monitoring carbon footprint with interactive D3.js charts, data visualization, and actionable environmental insights.',
-    tags: ['React', 'D3.js', 'Node.js', 'Express'],
+    title: 'SpendPilot — AI Spend Audit Tool',
+    description: 'A comprehensive web platform for internship management, allowing students to browse and apply for internship opportunities.',
+    tags: ['React', 'Node.js', 'Web Portal'],
     gradient: 'linear-gradient(135deg, #fde68a 0%, #86efac 100%)',
-    date: 'Mar 2025',
-    github: '#',
-    live: '#',
+    date: '2024',
+    github: 'https://github.com/Psnastudent/intern',
+    live: 'https://intern-e6ay.onrender.com',
   },
   {
-    title: 'MediConnect App',
-    description: 'Healthcare appointment booking application with an AI-powered symptom checker, real-time doctor availability, and push notification reminders.',
-    tags: ['Flutter', 'Firebase', 'AI', 'Dart'],
+    title: '3D Portfolio',
+    description: 'A modern, interactive 3D web portfolio featuring immersive WebGL graphics, sleek typography, and smooth animations.',
+    tags: ['WebGL', 'Three.js', 'React'],
     gradient: 'linear-gradient(135deg, #c4b5fd 0%, #fca5a5 100%)',
-    date: 'Jan 2025',
-    github: '#',
-    live: '#',
-  },
-  {
-    title: 'CryptoVault',
-    description: 'Decentralized crypto portfolio tracker with real-time price analytics, transaction history, and Web3 wallet integration for seamless asset management.',
-    tags: ['React', 'Web3', 'Solidity', 'Ethers.js'],
-    gradient: 'linear-gradient(135deg, #93c5fd 0%, #c4b5fd 100%)',
-    date: 'Nov 2024',
-    github: '#',
-    live: '#',
-  },
-  {
-    title: 'StudyBuddy AI',
-    description: 'AI-powered study companion featuring smart flashcard generation, adaptive quizzes, and personalized study plans using OpenAI GPT integration.',
-    tags: ['Python', 'OpenAI', 'React', 'FastAPI'],
-    gradient: 'linear-gradient(135deg, #fca5a5 0%, #fde68a 100%)',
-    date: 'Aug 2024',
-    github: '#',
-    live: '#',
-  },
-  {
-    title: 'FoodFlow',
-    description: 'Food delivery app with route optimization, live GPS tracking, restaurant discovery, and a real-time order management system.',
-    tags: ['React Native', 'Express', 'MongoDB', 'Socket.io'],
-    gradient: 'linear-gradient(135deg, #86efac 0%, #fde68a 100%)',
-    date: 'Jun 2024',
-    github: '#',
-    live: '#',
-  },
-  {
-    title: 'CloudSync',
-    description: 'Cloud file management system with real-time collaboration features, drag-and-drop uploads, version history, and AWS S3 integration.',
-    tags: ['TypeScript', 'AWS', 'Next.js', 'Prisma'],
-    gradient: 'linear-gradient(135deg, #7dd3fc 0%, #86efac 100%)',
-    date: 'Apr 2024',
-    github: '#',
-    live: '#',
+    date: '2025',
+    github: 'https://github.com/Psnastudent/3dpportfolio',
+    live: 'https://sk-citk.onrender.com/',
   },
 ];
 
@@ -100,7 +64,7 @@ const achievements = [
   },
 ];
 
-const INITIAL_COUNT = 3;
+const INITIAL_COUNT = 4;
 
 /* Box reveal animation variants */
 const cardVariants = {
