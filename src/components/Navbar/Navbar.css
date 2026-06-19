@@ -57,6 +57,7 @@
 }
 
 .navbar__links {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 0.15rem;
@@ -85,18 +86,16 @@
   color: var(--text-primary);
 }
 
-.navbar__link-text {
-  position: relative;
-  z-index: 1;
-}
-
 .navbar__link-indicator {
   position: absolute;
-  inset: 0;
+  top: 0;
+  height: 100%;
   background: var(--bg-glass-hover);
   border-radius: var(--radius-md);
   border: 1px solid var(--border-subtle);
   z-index: 0;
+  pointer-events: none;
+  list-style: none;
 }
 
 .navbar__link--resume {
