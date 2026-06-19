@@ -51,7 +51,7 @@ export default function Navbar() {
     >
       <div className="navbar__inner">
         <a href="#hero" className="navbar__logo" onClick={(e) => handleClick(e, '#hero')}>
-          <img src="/favicon.svg" alt="Logo" className="navbar__logo-image" />
+          <span className="navbar__logo-icon">S</span>
           <span className="navbar__logo-text">anthosh Kumar S</span>
         </a>
 
