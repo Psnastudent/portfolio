@@ -51,7 +51,7 @@ export default function Navbar() {
     >
       <div className="navbar__inner">
         <a href="#hero" className="navbar__logo" onClick={(e) => handleClick(e, '#hero')}>
-          <span className="navbar__logo-icon">S</span>
+          <img src="/favicon.svg" alt="Logo" className="navbar__logo-image" />
           <span className="navbar__logo-text">anthosh Kumar S</span>
         </a>
 
@@ -62,7 +62,7 @@ export default function Navbar() {
                 href={link.href}
                 target={link.external ? "_blank" : undefined}
                 rel={link.external ? "noopener noreferrer" : undefined}
-                className={`navbar__link ${activeSection === link.href.replace('#', '') ? 'navbar__link--active' : ''}`}
+                className={`navbar__link ${activeSection === link.href.replace('#', '') ? 'navbar__link--active' : ''} ${link.label === 'Resume' ? 'navbar__link--resume' : ''}`}
                 onClick={(e) => {
                   if (link.external) return;
                   handleClick(e, link.href);
@@ -103,7 +103,7 @@ export default function Navbar() {
                 href={link.href}
                 target={link.external ? "_blank" : undefined}
                 rel={link.external ? "noopener noreferrer" : undefined}
-                className={`navbar__mobile-link ${activeSection === link.href.replace('#', '') ? 'navbar__mobile-link--active' : ''}`}
+                className={`navbar__mobile-link ${activeSection === link.href.replace('#', '') ? 'navbar__mobile-link--active' : ''} ${link.label === 'Resume' ? 'navbar__mobile-link--resume' : ''}`}
                 onClick={(e) => {
                   if (link.external) {
                     setMobileOpen(false);
