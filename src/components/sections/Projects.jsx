@@ -41,6 +41,24 @@ const projects = [
     github: 'https://github.com/Psnastudent/3dpportfolio',
     live: 'https://sk-citk.onrender.com/',
   },
+  {
+    title: 'Livestock Management',
+    description: 'A comprehensive platform designed to manage and monitor livestock efficiently.',
+    tags: ['Management', 'Web App'],
+    gradient: 'linear-gradient(135deg, #a78bfa 0%, #f472b6 100%)',
+    date: '2024',
+    github: 'https://github.com/Psnastudent/livestock',
+    live: '#',
+  },
+  {
+    title: 'Zentask',
+    description: 'A modern task management application to organize workflow and enhance personal productivity.',
+    tags: ['Productivity', 'React', 'App'],
+    gradient: 'linear-gradient(135deg, #34d399 0%, #3b82f6 100%)',
+    date: '2024',
+    github: 'https://github.com/Psnastudent/zentask',
+    live: '#',
+  },
 ];
 
 const achievements = [

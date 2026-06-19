@@ -10,6 +10,7 @@ const navLinks = [
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
   { label: 'Contact', href: '#contact' },
+  { label: 'Resume', href: '/resume.pdf', external: true },
 ];
 
 export default function Navbar() {
@@ -56,14 +57,19 @@ export default function Navbar() {
 
         <ul className="navbar__links">
           {navLinks.map((link) => (
-            <li key={link.href}>
+            <li key={link.label}>
               <a
                 href={link.href}
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noopener noreferrer" : undefined}
                 className={`navbar__link ${activeSection === link.href.replace('#', '') ? 'navbar__link--active' : ''}`}
-                onClick={(e) => handleClick(e, link.href)}
+                onClick={(e) => {
+                  if (link.external) return;
+                  handleClick(e, link.href);
+                }}
               >
-                {link.label}
-                {activeSection === link.href.replace('#', '') && (
+                <span className="navbar__link-text">{link.label}</span>
+                {!link.external && activeSection === link.href.replace('#', '') && (
                   <motion.span className="navbar__link-indicator" layoutId="activeLink" />
                 )}
               </a>
@@ -93,10 +99,18 @@ export default function Navbar() {
           >
             {navLinks.map((link, i) => (
               <motion.a
-                key={link.href}
+                key={link.label}
                 href={link.href}
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noopener noreferrer" : undefined}
                 className={`navbar__mobile-link ${activeSection === link.href.replace('#', '') ? 'navbar__mobile-link--active' : ''}`}
-                onClick={(e) => handleClick(e, link.href)}
+                onClick={(e) => {
+                  if (link.external) {
+                    setMobileOpen(false);
+                    return;
+                  }
+                  handleClick(e, link.href);
+                }}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.05 }}

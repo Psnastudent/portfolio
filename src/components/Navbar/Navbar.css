@@ -85,13 +85,18 @@
   color: var(--text-primary);
 }
 
+.navbar__link-text {
+  position: relative;
+  z-index: 1;
+}
+
 .navbar__link-indicator {
   position: absolute;
   inset: 0;
   background: var(--bg-glass-hover);
   border-radius: var(--radius-md);
   border: 1px solid var(--border-subtle);
-  z-index: -1;
+  z-index: 0;
 }
 
 .navbar__hamburger {
